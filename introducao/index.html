@@ -4,37 +4,109 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Workshop Docker - Introdução</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="/node_modules/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="/node_modules/reveal.js/css/theme/night.css">
+		<link rel="stylesheet" href="/css/colors.css">
+		<link rel="stylesheet" href="/css/styles.css">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="/node_modules/reveal.js/lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '/node_modules/reveal.js/css/print/pdf.css' : '/node_modules/reveal.js/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background-video="1.mp4" data-background-video-loop="loop" data-background-color="#000000">
-					<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-						<h2>Video Backgrounds</h2>
-						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+				<section id="intro"
+				         data-background-video="videos/1.mp4" 
+						 data-background-video-loop="loop" 
+						 data-background-color="#000000">
+					<h3>
+						Introdução ao
+					</h3>
+					<img src="img/large_h-dark-trans.png" class="plain" style="background: 0;" alt="">
+				</section>
+
+				<section id="who"
+						 data-background="img/DSC09436_edited_001.jpg">
+					<div style="text-align: right;font-size: 24px;width: 60%;float: right;line-height: 36px;">
+						<p class="mB40px">Luiz Antônio Adolphs Junior</p>
+						
+						<p>
+							Desenvolvedor de software desde 2006.
+							Gosto por programação, padrões e arquitetura de software.
+						</p>
 					</div>
+				</section>
+				<section id="what-but-first">
+					<section>
+						<h4>O que é o <span class="blue">Docker</span>, containers e por que usar?</h4>
+						<p class="fragment">Primeiro, vamos revisar o que é um <span class="lime">software</span>!</p>
+					</section>
+					<section>
+						<h4>Wikipedia to the Rescue!</h4>
+						<div style="display:grid; justify-items: center; align-items: center;">
+							<div style="grid-column-start: 1">
+								<img src="img/superhero-303189_1280.png" alt="" class="clear">
+							</div>
+							<div style="grid-column-start: 2">
+								<blockquote cite="https://pt.wikipedia.org/wiki/Software#cite_note-4" style="font-size: 0.7em">
+									Um programa de computador é composto por uma sequência de instruções, que é interpretada e executada por um 
+									<span class="orange">processador</span> ou por uma <span class="purple">máquina virtual</span>. Em um programa 
+									correto e funcional, essa sequência segue padrões específicos que resultam em um comportamento desejado.
+								</blockquote>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section id="many-dependencies">
+					<section>
+						<h4>Hoje existe um número grande de paradigmas, que se explodem em linguagens de programação</h4>
+						<pre>Mostrar gráfico</pre>
+					</section>
+					<section>
+						<p class="fragment">
+							Muitas linguagens acabam criando dependências e amarrações com o <span class="teal">ambiente</span> que estão instaladas.
+						</p>
+						<p class="fragment">
+							Essas dependências, com o tempo, ficam difíceis de gerir.
+						</p>
+					</section>
+					<section>
+						<p class="fragment">
+							Existem muitos softwares para gerência de <span class="teal">ambientes</span>.
+						</p>
+						<p class="fragment">
+							Entretanto esse <span class="teal">ambiente</span> é sempre criado sob-demanda através de uma receita, não é transportado.
+						</p>
+					</section>
+				</section>
+				<section id="what-if">
+					<h4>E se pudessemos, além do <span class="lime">software</span>, empacotar também seu <span class="teal">ambiente</span>?</h4>
+				</section>
+				<section id="super-whale">
+					<img src="img/superwhale_001.png" alt="" class="clear">
+					<h4><span class="blue">Docker</span>!</h4>
+				</section>
+				<section>
+					<p>
+						
+					</p>
 				</section>
 			</div>
 		</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+		<script src="/node_modules/reveal.js/lib/js/head.min.js"></script>
+		<script src="/node_modules/reveal.js/js/reveal.js"></script>
 
 		<script>
 			// More info about config & dependencies:
@@ -42,12 +114,13 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: '/node_modules/reveal.js/plugin/markdown/marked.js' },
+					{ src: '/node_modules/reveal.js/plugin/markdown/markdown.js' },
+					{ src: '/node_modules/reveal.js/plugin/notes/notes.js', async: true },
+					{ src: '/node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
 		</script>
 	</body>
 </html>
+
