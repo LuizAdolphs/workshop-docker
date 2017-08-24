@@ -1,0 +1,13 @@
+.mB40px {
+    margin-bottom: 40px !important;
+}
+
+img.clear {
+    background: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.reveal ul {
+    list-style-type: none !important;
+}

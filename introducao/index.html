@@ -4,33 +4,212 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Workshop Docker - Introdução</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="/node_modules/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="/node_modules/reveal.js/css/theme/night.css">
+		<link rel="stylesheet" href="/css/colors.css">
+		<link rel="stylesheet" href="/css/styles.css">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="/css/paraiso-dark.css">
+
+		<link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '/node_modules/reveal.js/css/print/pdf.css' : '/node_modules/reveal.js/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section id="intro"
+				         data-background-video="videos/1.mp4" 
+						 data-background-video-loop="loop" 
+						 data-background-color="#000000">
+					<h3>
+						Introdução ao
+					</h3>
+					<img src="img/large_h-dark-trans.png" class="plain" style="background: 0;" alt="">
+				</section>
+
+				<section id="who"
+						 data-background="img/DSC09436_edited_001.jpg">
+					<div style="text-align: right;font-size: 24px;width: 60%;float: right;line-height: 36px;">
+						<p class="mB40px">Luiz Antônio Adolphs Junior</p>
+						
+						<p>
+							Desenvolvedor de software desde 2006.
+							Gosto por programação, padrões e arquitetura de software.
+						</p>
+					</div>
+				</section>
+				<section id="what-but-first">
+					<section>
+						<h4>O que é o <span class="blue">Docker</span>, containers e por que usar?</h4>
+						<p class="fragment">Primeiro, vamos revisar o que é um <span class="lime">software</span>!</p>
+					</section>
+					<section>
+						<h4>Wikipedia to the Rescue!</h4>
+						<div style="display:grid; justify-items: center; align-items: center;">
+							<div style="grid-column-start: 1">
+								<img src="img/superhero-303189_1280.png" alt="" class="clear">
+							</div>
+							<div style="grid-column-start: 2">
+								<blockquote cite="https://pt.wikipedia.org/wiki/Software#cite_note-4" style="font-size: 0.7em">
+									Um programa de computador é composto por uma sequência de instruções, que é interpretada e executada por um 
+									<span class="orange">processador</span> ou por uma <span class="purple">máquina virtual</span>. Em um programa 
+									correto e funcional, essa sequência segue padrões específicos que resultam em um comportamento desejado.
+								</blockquote>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section id="many-dependencies">
+					<section>
+						<h4>Hoje existe um número grande de paradigmas, que se explodem em linguagens de programação</h4>
+						<pre>Mostrar gráfico</pre>
+					</section>
+					<section>
+						<p>
+							Muitas linguagens acabam criando dependências e amarrações com o <span class="teal">ambiente</span> que estão instaladas.
+						</p>
+						<p class="fragment">
+							Essas dependências, com o tempo, ficam difíceis de gerir.
+						</p>
+					</section>
+					<section>
+						<p>
+							Existem muitos softwares para gerência de <span class="teal">ambientes</span>.
+						</p>
+						<p class="fragment">
+							Entretanto esse <span class="teal">ambiente</span> é sempre criado sob-demanda através de uma receita, não é transportado.
+						</p>
+					</section>
+				</section>
+				<section id="what-if">
+					<h4>E se pudessemos, além do <span class="lime">software</span>, empacotar também seu <span class="teal">ambiente</span>?</h4>
+				</section>
+				<section id="super-whale">
+					<img src="img/superwhale_001.png" alt="" class="clear">
+					<h4><span class="blue">Docker</span>!</h4>
+				</section>
+				<section id="what-is">
+					<p>
+						<span class="blue">Docker</span> é a plataforma para criação e gerência de <span class="fuchsia">containers</span>.
+					</p>
+					<img src="img/Container-PNG-HD.png" alt="" class="clear">
+				</section>
+				<section id="about-container">
+					<section>
+						<p>
+							<span class="fuchsia">Containers</span> são subsistemas isolados, que rodam em cima do S.O compatilhando recursos em comum.
+						</p>
+						<img src="img/normal_ian-symbol-freight-cargo-ship-1.png" alt="" class="clear" style="height: 300px">
+					</section>
+					<section>
+							<img src="img/Container@2x.png" alt="" class="clear" style="height: 300px">
+					</section>
+				</section>
+				<section id="what-i-can-do">
+					<section>
+						<p>Com <span class="fuchsia">containers</span> ganhamos algumas facilidades...</p>
+					</section>
+					<section 
+						data-background-video="videos/containers.mp4" 
+						data-background-video-loop="loop" 
+						data-background-color="#000000">
+						<h4>Podemos transportar nossa aplicação junto com o ambiente (daí o conceito de container hehehe)</h4>
+					</section>
+					<section 
+						data-background-video="videos/fire.mp4" 
+						data-background-video-loop="loop" 
+						data-background-color="#000000">
+						<h4>Podemos atear fogo nele também!</h4>
+					</section>
+				</section>
+				<section id="are-stateless">
+					<h4><span class="fuchsia">Containers</span> são stateless!</h4>
+					<p class="fragment">
+						Podem ser destruidos, desmontados, recriados... E muito rapidamente!
+					</p>
+				</section>
+				<section id="are-SRP">
+					<h4><span class="fuchsia">Containers</span> (devem) conter uma responsabilidade única!</h4>
+					<p class="fragment">
+						Quer rodar um PHP com MySql? Cada um no seu <span class="fuchsia">container</span>!
+					</p>
+				</section>
+				<section id="are-Versioned">
+					<h4><span class="fuchsia">Containers</span> são versionados!</h4>
+					<p class="fragment">
+						Aí fica fácil testar seu software com uma versão especifica de framework, banco, etc...
+					</p>
+				</section>
+				<section id="has-repositories">
+					<h4><span class="fuchsia">Containers</span> são ficam num repositório!</h4>
+					<p class="fragment">
+						<span class="blue">Docker</span> não é apenas um software, é uma plataforma completa.
+					</p>
+				</section>
+				<section id="pretty-repositories">
+					<p>
+						Olha que bonitinho!
+					</p>
+					<img src="img/store.png" alt="" class="clear">
+				</section>
+				<section id="how-to-use">
+					<h4>Como usar essa budega?</h4>
+					<p class="fragment">
+						Não parece, mas estou usando agora mesmo!
+					</p>
+				</section>
+				<section id="dockerfile">
+					<h4><span class="orange">Dockerfile</span> (ou nossa receita de bolo)</h4>
+					<pre><code class="dockerfile" data-trim>
+						FROM node
+						
+						RUN npm install -g node-static
+						
+						WORKDIR /
+						
+						RUN mkdir app
+						
+						WORKDIR /app
+						
+						ENTRYPOINT /bin/bash -c "cd /app && static -a 0.0.0.0"
+											</code></pre>
+				</section>
+				<section id="liked-it?"
+					data-background-video="videos/bob.mp4" 
+					data-background-video-loop="loop" 
+					data-background-color="#000000">
+					<h4 class="bg-navy-0-5">É muita informação.... Gostaram?</h4>
+				</section>
+				<section id="next-class">
+					<h4>Vamos colocar a mão na massa!</h4>
+					<p class="fragment">
+						Não perca o próximo encontro!
+					</p>
+				</section>
+				<section id="contacts">
+					<ul>
+						<li><i class="fa fa-github" aria-hidden="true"></i> https://github.com/LuizAdolphs</li>
+						<li><i class="fa fa-bitbucket" aria-hidden="true"></i> https://bitbucket.org/LuizAdolphs</li>
+						<li><i class="fa fa-twitter" aria-hidden="true"></i> https://twitter.com/LuizAdolphs</li>
+						<li><i class="fa fa-envelope-o" aria-hidden="true"></i> luiz.adolphs@gmail.com</li>
+					</ul>
+				</section>
 			</div>
 		</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+		<script src="/node_modules/reveal.js/lib/js/head.min.js"></script>
+		<script src="/node_modules/reveal.js/js/reveal.js"></script>
 
 		<script>
 			// More info about config & dependencies:
@@ -38,12 +217,13 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: '/node_modules/reveal.js/plugin/markdown/marked.js' },
+					{ src: '/node_modules/reveal.js/plugin/markdown/markdown.js' },
+					{ src: '/node_modules/reveal.js/plugin/notes/notes.js', async: true },
+					{ src: '/node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
 		</script>
 	</body>
 </html>
+

@@ -1,0 +1,8 @@
+1- Introducao ao Docker
+	- Introdução minha
+	Slide 2
+	- Falar sobre maneira geral do desenvolvimento de software
+		Todo o software é executando em cima de uma plataforma (maquina fisica ou virtual);
+	
+	Slide 3
+	- Plataformas tendem a variar, mostrar que softwares tendem a ter um vinculo muito forte com o ambiente onde estão rodando.
