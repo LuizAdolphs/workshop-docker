@@ -12,7 +12,9 @@
 		<link rel="stylesheet" href="/css/styles.css">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="/node_modules/reveal.js/lib/css/zenburn.css">
+		<link rel="stylesheet" href="/css/paraiso-dark.css">
+
+		<link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -136,6 +138,72 @@
 					<p class="fragment">
 						Podem ser destruidos, desmontados, recriados... E muito rapidamente!
 					</p>
+				</section>
+				<section id="are-SRP">
+					<h4><span class="fuchsia">Containers</span> (devem) conter uma responsabilidade única!</h4>
+					<p class="fragment">
+						Quer rodar um PHP com MySql? Cada um no seu <span class="fuchsia">container</span>!
+					</p>
+				</section>
+				<section id="are-Versioned">
+					<h4><span class="fuchsia">Containers</span> são versionados!</h4>
+					<p class="fragment">
+						Aí fica fácil testar seu software com uma versão especifica de framework, banco, etc...
+					</p>
+				</section>
+				<section id="has-repositories">
+					<h4><span class="fuchsia">Containers</span> são ficam num repositório!</h4>
+					<p class="fragment">
+						<span class="blue">Docker</span> não é apenas um software, é uma plataforma completa.
+					</p>
+				</section>
+				<section id="pretty-repositories">
+					<p>
+						Olha que bonitinho!
+					</p>
+					<img src="img/store.png" alt="" class="clear">
+				</section>
+				<section id="how-to-use">
+					<h4>Como usar essa budega?</h4>
+					<p class="fragment">
+						Não parece, mas estou usando agora mesmo!
+					</p>
+				</section>
+				<section id="dockerfile">
+					<h4><span class="orange">Dockerfile</span> (ou nossa receita de bolo)</h4>
+					<pre><code class="dockerfile" data-trim>
+						FROM node
+						
+						RUN npm install -g node-static
+						
+						WORKDIR /
+						
+						RUN mkdir app
+						
+						WORKDIR /app
+						
+						ENTRYPOINT /bin/bash -c "cd /app && static -a 0.0.0.0"
+											</code></pre>
+				</section>
+				<section id="liked-it?"
+					data-background-video="videos/bob.mp4" 
+					data-background-video-loop="loop" 
+					data-background-color="#000000">
+					<h4 class="bg-navy-0-5">É muita informação.... Gostaram?</h4>
+				</section>
+				<section id="next-class">
+					<h4>Vamos colocar a mão na massa!</h4>
+					<p class="fragment">
+						Não perca o próximo encontro!
+					</p>
+				</section>
+				<section id="contacts">
+					<ul>
+						<li><i class="fa fa-github" aria-hidden="true"></i> https://github.com/LuizAdolphs</li>
+						<li><i class="fa fa-bitbucket" aria-hidden="true"></i> https://bitbucket.org/LuizAdolphs</li>
+						<li><i class="fa fa-twitter" aria-hidden="true"></i> https://twitter.com/LuizAdolphs</li>
+						<li><i class="fa fa-envelope-o" aria-hidden="true"></i> luiz.adolphs@gmail.com</li>
+					</ul>
 				</section>
 			</div>
 		</div>
