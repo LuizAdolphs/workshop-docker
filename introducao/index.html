@@ -168,6 +168,18 @@
 					<p class="fragment">
 						Não parece, mas estou usando agora mesmo!
 					</p>
+					<pre class="fragment"><code class="dockerfile" data-trim>
+						docker build 
+							-f "C:\workshop-docker\introducao/Dockerfile" 
+							-t workshop-docker-parte1 .;
+						docker run 
+							-p 8080:8080 
+							-v "C:\workshop-docker\introducao:/app" 
+							--name introducao 
+							--rm 
+							-it 
+							-t workshop-docker-parte1;
+					</code></pre>
 				</section>
 				<section id="dockerfile">
 					<h4><span class="orange">Dockerfile</span> (ou nossa receita de bolo)</h4>
@@ -185,7 +197,20 @@
 						ENTRYPOINT /bin/bash -c "cd /app && static -a 0.0.0.0"
 											</code></pre>
 				</section>
-				<section id="liked-it?"
+				<section id="another-example">
+					<h4>Outro exemplo (alguém conhece o play framework?)</h4>
+					<pre><code class="bash" data-trim>
+					docker run --rm -it -p 9000:9000 ifinavet/playframework
+					
+					#uma vez dentro do container...	
+
+					play new hello
+					cd hello
+					play run
+
+											</code></pre>
+				</section>
+				<section id="liked-it"
 					data-background-video="videos/bob.mp4" 
 					data-background-video-loop="loop" 
 					data-background-color="#000000">
